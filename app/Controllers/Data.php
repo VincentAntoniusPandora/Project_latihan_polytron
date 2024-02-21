@@ -59,9 +59,10 @@ class Data extends BaseController
                 ]
             ],
             'company_phone' => [
-                'rules' => 'required',
+                'rules' => 'required|numeric',
                 'errors' => [
-                    'required' => 'The Company Phone field is required.'
+                    'required' => 'The Company Phone field is required.',
+                    'numeric' => 'The Company Phone field must be number.'
                 ]
             ],
             'company_address' => [
