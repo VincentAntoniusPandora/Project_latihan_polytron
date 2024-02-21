@@ -10,24 +10,21 @@
             <h1>Edit Company Details</h1>
             <div class="form-group ">
                 <label for="formGroupExampleInput">Company Name</label>
-                <input type="text" name="company_name" class="form-control" id="formGroupExampleInput"
-                    value="<?= $edit['company_name']; ?>">
+                <input type="text" name="company_name" class="form-control" id="formGroupExampleInput" value="<?= $edit['company_name']; ?>">
             </div>
             <br>
 
             <!-- phone number -->
             <div class="form-group ">
                 <label for="formGroupExampleInput">Phone Number</label>
-                <input type="text" name="company_phone" class="form-control" id="formGroupExampleInput"
-                    value="<?= $edit['company_phone']; ?>">
+                <input type="text" name="company_phone" class="form-control" id="formGroupExampleInput" value="<?= $edit['company_phone']; ?>">
             </div>
             <br>
 
             <!-- address -->
             <div class="form-group ">
                 <label for="formGroupExampleInput">Address</label>
-                <textarea type="text" name="company_address" class="form-control"
-                    id="formGroupExampleInput"><?= $edit['company_address']; ?></textarea>
+                <textarea type="text" name="company_address" class="form-control" id="formGroupExampleInput"><?= $edit['company_address']; ?></textarea>
             </div>
             <br>
 

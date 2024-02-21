@@ -63,9 +63,6 @@
                         <img src="/img/add image.png" alt="" id="chg-img" width="100px" height="100px" style="cursor: pointer; border-radius: 20px; object-fit:cover;">
                         <i class="fa-solid fa-plus" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size:30px">
                         </i>
-                        <!-- <a class="" for="formFile"
-                            style="position: absolute; bottom: 10%; left: 50%; transform: translate(-50%, -10%); font-size:10px; background-color: #990011; color:white; border-radius:5px; border-color:#990011">Change
-                            Photo</a> -->
                     </label>
                 </div>
             </div>
