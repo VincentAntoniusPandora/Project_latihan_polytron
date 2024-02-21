@@ -87,8 +87,7 @@
             </div>
             <br>
 
-            <button type="submit" class="btn" style="background-color: #990011
-; color: white;">Add Employee</button>
+            <button type="submit" class="btn" style="background-color: #990011; color: white;">Add Employee</button>
             <a type="submit" href="/employeeList/<?= $company_id ?>" class="btn btn-outline" style="color:#990011; border:2px solid #990011">Cancel</a>
         </div>
     </div>
