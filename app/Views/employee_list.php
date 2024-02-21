@@ -35,6 +35,7 @@
                         var parts = birthday.split('-');
                         var formattedBirthday = parts[2] + '/' + parts[1] + '/' + parts[0];
 
+                        // isi response
                         if (response.employee_picture) {
                             var detailsEmployee = '<img src="/img/' + response
                                 .employee_picture +
@@ -48,6 +49,7 @@
                             '<h4 style="color: #990011; margin-top: 10px;"><strong>' +
                             response.employee_name + '</strong></h4>';
 
+                        // format nomor telepon
                         let phone = response.employee_phone;
                         let cut =
                             `${phone.substring(1, 4)}-${phone.substring(4, 8)}-${phone.substring(8)}`;
@@ -84,6 +86,7 @@
 
 <div class="container">
     <br>
+    <!-- munculin pesan kalau error -->
     <?php if (!empty($message)) : ?>
         <div class="alert alert-danger" role="alert">
             <strong> <?= $message ?> </strong>
@@ -113,6 +116,7 @@
                 </div>
             </div>
 
+            <!-- foreach untuk list employee -->
             <?php foreach ($data as $d) : ?>
                 <div class="row mb-3">
                     <div class="col-12">
@@ -139,7 +143,7 @@
                                         </a>
 
                                         <br>
-                                        <a class="btn" href="/editEmply/<?= $d['employee_id']; ?>" style="border: none; background: none; padding: 0; margin: 0; color: blue;"><i class="fa-solid fa-pen" style="font-size: small;"></i> Edit</a>
+                                        <a class="btn" href="/editEmply/<?= $d['employee_id']; ?>" style="border: none; background: none; padding: 0; margin: 0; color: #A1A1A1;"><i class="fa-solid fa-pen" style="font-size: small;"></i> Edit</a>
                                         |
                                         <form action="/removeEmply/<?= $d['employee_id']; ?>" method="post" class="d-inline">
                                             <input type="hidden" name="_method" value="DELETE">

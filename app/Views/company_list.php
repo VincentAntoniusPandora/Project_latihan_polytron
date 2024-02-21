@@ -71,7 +71,7 @@
                                     List</a>
                                 <br>
                                 <a class="btn" href="/editCompny/<?= $d['company_id']; ?>" style=" border: none; background:
-                                none; padding: 0; margin: 0; color: blue;"><i class="fa-solid fa-pen" style="font-size: small;"></i> Edit</a> |
+                                none; padding: 0; margin: 0; color: #A1A1A1;"><i class="fa-solid fa-pen" style="font-size: small;"></i> Edit</a> |
                                 <form action="/removeCompny/<?= $d['company_id']; ?>" method="post" class="d-inline">
                                     <input type="hidden" name="_method" value="DELETE">
                                     <button type="submit" class="btn" style="border: none; background: none; padding: 0; margin: 0; color: red;" onclick=" return confirm('Yakin akan dihapus?');">Remove</button>
