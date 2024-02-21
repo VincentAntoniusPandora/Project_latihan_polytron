@@ -31,10 +31,6 @@ class Data extends BaseController
 
     public function addCompanyView(): string
     {
-        // session();
-        // $data = [
-        //     'validation' => \Config\Services::validation()
-        // ];
         return view('add_new_company');
     }
 
@@ -42,12 +38,6 @@ class Data extends BaseController
     {
         $dataModel = new DataModel();
 
-        // if (!$this->validate([
-        //     'company_name' => 'required'
-        // ])) {
-        //     $validation = \Config\Services::validation();
-        //     return redirect()->to('/addNewCompny')->withInput()->with('validation', $validation->getErrors());
-        // }
         $validation = \Config\Services::validation();
 
 

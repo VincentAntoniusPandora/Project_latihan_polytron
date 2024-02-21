@@ -3,12 +3,6 @@
 <?= $this->section('content'); ?>
 
 <div class="container">
-    <!-- <div class="row">
-        <a href="/" class="d-inline-block align-items-center" style="color: #990011;">
-            <i class="fa-solid fa-arrow-left fa-1x mr-2"></i>
-            <h4 class="mb-0"><?= $company_name['company_name']; ?></h4>
-        </a>
-    </div> -->
     <a class="btn" href="/" style="border: none; background: none; padding: 0; margin-bottom: 10px; color: #990011; font-size: 30px">
         <i class="fa-solid fa-arrow-left mr-2" style="color: #A1A1A1; font-size: 20px"></i>
         <?= $company_name['company_name']; ?>
