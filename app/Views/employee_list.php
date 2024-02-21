@@ -57,7 +57,7 @@
                             cut +
                             '</strong></p>';
 
-                        detailsEmployee += '<p style="margin-top: -10px;">' + (response
+                        detailsEmployee += '<p style="margin-top: -10px; color: #A1A1A1;">' + (response
                                 .employee_gender == 0 ?
                                 '<i class="fa-solid fa-mars"></i> Male' :
                                 '<i class="fa-solid fa-venus"></i> Female') + ' | ' +
@@ -66,7 +66,7 @@
                         $('#employeeDetails').html(detailsEmployee);
 
                         // munculin detail employee di kanan
-                        $('.col-md-12').removeClass('col-md-12').addClass('col-md-8');
+                        $('.col-md-12').removeClass('col-md-12').addClass('col-md-9');
                         $('#employeeDetailsContainer').removeClass('d-none');
                     },
                     error: function(xhr, status, error) {
@@ -77,7 +77,7 @@
             });
             // hilangin detail employee di kanan
             $('#closeButton').click(function() {
-                $('.col-md-8').removeClass('col-md-8').addClass('col-md-12');
+                $('.col-md-9').removeClass('col-md-9').addClass('col-md-12');
                 $('#employeeDetailsContainer').addClass('d-none');
             });
         });
@@ -157,14 +157,14 @@
                 </div>
             <?php endforeach; ?>
         </div>
-        <div class="col-md-4 d-none" id="employeeDetailsContainer">
-            <div class="card" style="width: 18rem; position: relative; border-color: #FCF6F5;">
+        <div class="col-md-3 d-none" id="employeeDetailsContainer">
+            <div class="card" style="width: 20rem; height: 28rem; position: relative; border-color: #FCF6F5; border-radius: 20px;">
                 <div class="card-body">
                     <button id="closeButton" class="btn" style="position: absolute; top: 10px; right: 10px; border: none; background: none; padding: 0; margin: 0;">
-                        <i class="fas fa-times-circle fa-lg" style="color: #B197FC;"></i>
+                        <i class="fas fa-times-circle fa-lg" style="color: #A1A1A1;"></i>
                     </button>
                     <br>
-                    <div id="employeeDetails"></div>
+                    <div id="employeeDetails" style="margin-left: 6%;"></div>
                 </div>
             </div>
         </div>
