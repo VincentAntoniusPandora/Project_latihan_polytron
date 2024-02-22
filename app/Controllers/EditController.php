@@ -46,6 +46,42 @@ class EditController extends BaseController
             $company_id = $employee['company_id'];
         }
 
+        $validation = \Config\Services::validation();
+
+
+        $validation->setRules([
+            'employee_name' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'The Employee Name field is required.'
+                ]
+            ],
+            'employee_gender' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'The Employee Gender field is required.'
+                ]
+            ],
+            'employee_birthday' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'The Employee Birthday field is required.'
+                ]
+            ],
+            'employee_phone' => [
+                'rules' => 'required|numeric',
+                'errors' => [
+                    'required' => 'The Employee Phone field is required.',
+                    'numeric' => 'The Employee Phone field must be number.'
+                ]
+            ],
+        ]);
+
+
+        if (!$validation->withRequest($this->request)->run()) {
+            return redirect()->back()->withInput()->with('errors', $validation->getErrors());
+        }
+
         $dataModel->save([
             'employee_id' => $employee_id,
             'employee_name' => $this->request->getVar('employee_name'),
@@ -81,6 +117,36 @@ class EditController extends BaseController
     public function updateCompany($company_id)
     {
         $dataModel = new DataModel();
+
+        $validation = \Config\Services::validation();
+
+
+        $validation->setRules([
+            'company_name' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'The Company Name field is required.'
+                ]
+            ],
+            'company_phone' => [
+                'rules' => 'required|numeric',
+                'errors' => [
+                    'required' => 'The Company Phone field is required.',
+                    'numeric' => 'The Company Phone field must be number.'
+                ]
+            ],
+            'company_address' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'The Company Address field is required.'
+                ]
+            ]
+        ]);
+
+
+        if (!$validation->withRequest($this->request)->run()) {
+            return redirect()->back()->withInput()->with('errors', $validation->getErrors());
+        }
 
         $dataModel->save([
             'company_id' => $company_id,

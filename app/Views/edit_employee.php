@@ -8,6 +8,14 @@
         <div class="col-md-6">
             <!-- employee name -->
             <h1>Edit Employee Details</h1>
+            <?php if (session()->has('errors')) : ?>
+                <div class="alert alert-danger" role="alert">
+                    <?php foreach (session('errors') as $error) : ?>
+                        <strong><?= esc($error) ?></strong>
+                        <br>
+                    <?php endforeach; ?>
+                </div>
+            <?php endif; ?>
             <div class="form-group ">
                 <label for="formGroupExampleInput">Employee Name</label>
                 <input type="text" name="employee_name" class="form-control" id="formGroupExampleInput" placeholder="Enter new employee name*" value="<?= $edit['employee_name']; ?>">
