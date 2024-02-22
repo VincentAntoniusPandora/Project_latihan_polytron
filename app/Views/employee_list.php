@@ -39,10 +39,10 @@
                         if (response.employee_picture) {
                             var detailsEmployee = '<img src="/img/' + response
                                 .employee_picture +
-                                '" alt="..."  style="border-radius: 20px; object-fit:cover; width: 250px; height: 250px;">';
+                                '" alt="..."  style="border-radius: 20px; object-fit:cover; width: 200px; height: 200px;">';
                         } else {
                             var detailsEmployee =
-                                '<img src="/img/No_Image_Available.jpg" alt="" class="img-thumbnail" style="border-radius: 20px; object-fit:cover; width: 250px; height: 250px;">';
+                                '<img src="/img/No_Image_Available.jpg" alt="" style="border-radius: 20px; object-fit:cover; width: 200px; height: 200px;">';
                         }
 
                         detailsEmployee +=
@@ -158,13 +158,15 @@
             <?php endforeach; ?>
         </div>
         <div class="col-md-3 d-none" id="employeeDetailsContainer">
-            <div class="card" style="width: 20rem; height: 28rem; position: relative; border-color: #FCF6F5; border-radius: 20px;">
-                <div class="card-body">
+            <div class="card" style="width: 100%; height: auto; position: relative; border-color: #FCF6F5; border-radius: 20px;">
+                <div class="card-body" style="align-self:center">
                     <button id="closeButton" class="btn" style="position: absolute; top: 10px; right: 10px; border: none; background: none; padding: 0; margin: 0;">
                         <i class="fas fa-times-circle fa-lg" style="color: #A1A1A1;"></i>
                     </button>
                     <br>
-                    <div id="employeeDetails" style="margin-left: 6%;"></div>
+                    <div>
+                        <div id="employeeDetails"></div>
+                    </div>
                 </div>
             </div>
         </div>
